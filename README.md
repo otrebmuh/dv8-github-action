@@ -17,7 +17,7 @@ The result of the analysis.
 ## Example usage
 
     - name: Depends analysis step
-        uses: otrebmuh/dv8-github-action@0.1
+        uses: otrebmuh/dv8-github-action@v0.2
         id: depends
         with:
           language: 'java'
