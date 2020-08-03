@@ -1,21 +1,26 @@
-# Hello world docker action
+# Depends DV8 analysis action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action performs an analysis of the project and identifies architectural issues using depends.
 
 ## Inputs
 
-### `who-to-greet`
+### `language`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Source code language: cpp, java, ruby, python, pom . Default `"java"`.
 
 ## Outputs
 
-### `time`
+### `result`
 
-The time we greeted you.
+The result of the analysis.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
-with:
-  who-to-greet: 'Mona the Octocat'
+    - name: Depends analysis step
+        uses: otrebmuh/dv8-github-action@0.1
+        id: depends
+        with:
+          language: 'java'
+      # Use the output from the depends step
+    - name: Depends result
+        run: echo "The result of the analysis was ${{ steps.depends.outputs.result }}"
