@@ -1,16 +1,16 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Depends DV8 analysis'
+description: 'Perform analysis of architectural issues'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  language:  # id of input
+    description: 'Language of the program'
     required: true
-    default: 'World'
+    default: 'java'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  result: # id of output
+    description: 'Result of depends analysis'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.language }}
