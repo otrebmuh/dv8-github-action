@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
 echo "Running depends"
-java -jar /depends
+/opt/java/openjdk/bin/java -jar /depends.jar
