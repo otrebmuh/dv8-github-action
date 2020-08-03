@@ -5,7 +5,7 @@ echo "Running depends"
 
 FILE=/depends.json
 if [ -f "$FILE" ]; then
-    echo "depends analysis success"
+    echo "::set-output name=result::success"
 else 
-    echo "depends analysis failed"
+    echo "::set-output name=result::failure"
 fi

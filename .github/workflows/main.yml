@@ -13,7 +13,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: depends
         with:
-          languaje: 'java'
+          language: 'java'
       # Use the output from the `hello` step
       - name: Depends result
         run: echo "The result of the analysis was ${{ steps.depends.outputs.result }}"
