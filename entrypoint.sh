@@ -3,7 +3,7 @@
 echo "Running depends"
 /opt/java/openjdk/bin/java -jar /depends.jar -s -p dot -d . $1 src depends
 
-ls /
+find . | grep depends.json
 
 FILE=/depends.json
 if [ -f "$FILE" ]; then
