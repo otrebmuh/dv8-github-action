@@ -1,10 +1,10 @@
 #!/bin/sh -l
 
-echo "Activating DV8 with code: "$3
+echo "Activating DV8 with code: $3"
 /usr/local/bin/dv8-console license:activate -licenseKey $2 -activationCode $3
 
-echo "Running depends"
-/opt/java/openjdk/bin/java -jar /depends.jar -s -p dot -d . $1 src depends
+echo "Running depends with language $1"
+/opt/java/openjdk/bin/java -jar /depends/depends.jar -s -p dot -d . $1 src depends
 
 echo "Generating arch report"
 /usr/local/bin/dv8-console arch-report -paramsFile archreport.properties

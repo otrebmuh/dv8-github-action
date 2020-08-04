@@ -5,7 +5,6 @@ inputs:
   language:  # id of input
     description: 'Language of the program'
     required: true
-    default: 'java'
   licenseKey:
     description: 'License key'
     required: true
@@ -20,3 +19,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.language }}
+    - ${{ inputs.licenseKey }}
+    - ${{ inputs.activationCode }}
+
