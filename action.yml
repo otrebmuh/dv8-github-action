@@ -6,6 +6,12 @@ inputs:
     description: 'Language of the program'
     required: true
     default: 'java'
+  licenseKey:
+    description: 'License key'
+    required: true
+  activationCode:
+    description: 'Activation code'
+    required: true
 outputs:
   result: # id of output
     description: 'Result of depends analysis'

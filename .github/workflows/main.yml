@@ -14,6 +14,8 @@ jobs:
         id: depends
         with:
           language: 'java'
+          licenseKey: ${{ secrets.licensekey }}
+          activationCode: ${{ secrets.activationcode }}
       # Use the output from the `hello` step
       - name: Depends result
         run: echo "The result of the analysis was ${{ steps.depends.outputs.result }}"
